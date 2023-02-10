@@ -1,0 +1,3 @@
+[submodule "UnityProject/DefenceGBL/Assets/3rdParty"]
+	path = UnityProject/DefenceGBL/Assets/3rdParty
+	url = git@github.com:flboo/3rdParty.git
