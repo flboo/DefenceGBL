@@ -11,7 +11,6 @@ public class FunctionDelegate : MonoBehaviour
     public static FunctionDelegate Instance;
     public function Function;
 
-
     void Awake()
     {
         Instance = this;
