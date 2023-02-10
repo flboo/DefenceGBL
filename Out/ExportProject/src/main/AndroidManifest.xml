@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?><!--此处package值应该填入你游戏工程的包名-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" package="honey.tianmi.wild" android:installLocation="preferExternal" android:versionCode="1" android:versionName="1.0">
+
+  <uses-feature android:name="android.hardware.camera.autofocus" tools:node="remove" />
+  <uses-permission android:name="android.permission.WRITE_SETTINGS" tools:node="remove" />
+  <uses-feature android:name="android.hardware.camera" tools:node="remove" />
+
+  <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" tools:node="remove" />
+  <uses-permission android:name="android.permission.CAMERA" tools:node="remove" />
+  <uses-permission android:name="android.permission.GET_TASKS" tools:node="remove" />
+  <uses-permission android:name="android.permission.RECORD_AUDIO" tools:node="remove" />
+  <uses-permission android:name="android.permission.BLUETOOTH" tools:node="remove" />
+  <uses-permission android:name="android.permission.REORDER_TASKS" />
+
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <!-- 添加DataEye需要申请的权限  start -->
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+  <!-- 添加Firebase需要申请的权限 -->
+  <uses-permission android:name="android.permission.WAKE_LOCK" />
+<!--   <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+  <permission android:name="${applicationId}.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+  <uses-permission android:name="${applicationId}.permission.C2D_MESSAGE" /> -->
+  <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+  <uses-permission android:name="android.permission.READ_LOGS" />
+  <uses-permission android:name="android.permission.VIBRATE" />
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+  <uses-feature android:glEsVersion="0x00020000" />
+  <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
+  <uses-feature android:name="android.hardware.touchscreen.multitouch" android:required="false" />
+  <uses-feature android:name="android.hardware.touchscreen.multitouch.distinct" android:required="false" />
+  <uses-feature android:name="android.software.leanback" android:required="false" />
+  <!-- 添加DataEye需要申请的权限  end -->
+  <supports-screens android:smallScreens="true" android:normalScreens="true" android:largeScreens="true" android:xlargeScreens="true" android:anyDensity="true" />
+  <!--<uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="27" />
+        -->
+  <!--android:name="com.mob.MobApplication" -->
+  <application android:name=".UnityApplication"
+      android:icon="@mipmap/app_icon"
+      android:label="@string/app_name"
+      android:supportsRtl="true"
+      android:hardwareAccelerated="true"
+      android:usesCleartextTraffic="true">
+<!--    android:allowBackup="true"-->
+    <!--android:debuggable="true" -->
+    <!-- 添加DataEye需要配置的Meta start -->
+    <!-- DC_APPID 是一组32位的代码，可以在g.dataeye.com创建游戏后获得. -->
+    <!-- “YOUR_APPID”的部分要按照实际情况设置，一定要记得替换哦 -->
+    <meta-data android:name="DC_APPID" android:value="94136BDFFD9A1086EAECFFBC64AB26A8" />
+    <!-- DC_CHANNEL对应于您的发布渠道，不同渠道需要做相应的修改 -->
+    <!-- “YOUR_CHANNEL_ID”的部分要按照实际情况设置，一定要记得替换哦 -->
+    <meta-data android:name="DC_CHANNEL" android:value="GOOGLE" />
+    <!-- 添加DataEye需要配置的Meta end -->
+    <activity android:label="@string/app_name" android:name=".UnityPlayerActivity" android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|uiMode|screenSize|smallestScreenSize|fontScale|layoutDirection|density" android:hardwareAccelerated="true" android:launchMode="singleTask">
+      <meta-data android:name="unityplayer.UnityActivity" android:value="true" />
+      <meta-data android:name="unityplayer.ForwardNativeEventsToDalvik" android:value="false" />
+      <meta-data android:name="android.notch_support" android:value="true" />
+    </activity>
+    <activity android:name=".UnityMain" >
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+        <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+      </intent-filter>
+      <!--注册scheme-->
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <!--BROWSABLE指定该Activity能被浏览器安全调用-->
+        <category android:name="android.intent.category.BROWSABLE"/>
+        <!--声明自定义scheme，类似于http, https-->
+        <data android:scheme="openapp" android:host="happyr" android:path="/abc" android:port="8999"/>
+      </intent-filter>
+    </activity>
+    <activity-alias
+        android:name="${applicationId}.wxapi.WXEntryActivity"
+        android:exported="true"
+        android:targetActivity="com.we.modoo.core.WXEntryActivity" />
+    <activity
+        android:name="com.mob.moblink.MobLinkActivity"
+        android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
+        android:launchMode="singleTask">
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <category android:name="android.intent.category.BROWSABLE"/>
+        <data android:scheme="${moblink_scheme}" android:host="${moblink_host}" />
+      </intent-filter>
+      <intent-filter android:autoVerify="true">
+        <action android:name="android.intent.action.VIEW"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <category android:name="android.intent.category.BROWSABLE"/>
+        <data android:host="${moblink_host}" android:scheme="http"/>
+        <data android:host="${moblink_host}" android:scheme="https"/>
+      </intent-filter>
+    </activity>
+
+    <!--<uses-library android:name="org.apache.http.legacy" android:required="false" />-->
+
+    <!--不使用头条要去掉-->
+    <provider
+        android:name="com.bytedance.sdk.openadsdk.multipro.TTMultiProvider"
+        android:authorities="${applicationId}.TTMultiProvider"
+        android:exported="false" />
+
+    <!--AppsFlyer-->
+    <receiver
+        android:name="com.appsflyer.SingleInstallBroadcastReceiver"
+        android:exported="true">
+      <intent-filter>
+        <action android:name="com.android.vending.INSTALL_REFERRER" />
+      </intent-filter>
+    </receiver>
+    <!--<activity android:name="com.appsflyer.GetDeepLinkingActivity" android:exported="true">-->
+    <!--<intent-filter>-->
+    <!--<action android:name="android.intent.action.VIEW" />-->
+    <!--<category android:name="android.intent.category.DEFAULT" />-->
+    <!--<category android:name="android.intent.category.BROWSABLE" />-->
+    <!--<data android:scheme="your_scheme" />-->
+    <!--</intent-filter>-->
+    <!--</activity>-->
+
+    <meta-data android:name="BUILD_CHANNEL" android:value="${build_channel}" />
+    <meta-data android:name="CHANNEL" android:value="${af_channelid}" />
+    <meta-data android:name="unity.build-id" android:value="f05a2565-b25e-4cb5-954d-a46e9a767695" />
+
+    <meta-data
+        android:name="debug_mode"
+        android:value="false" /> <!-- 调试开关，发布时候设置false -->
+    <meta-data
+        android:name="is_offline_game"
+        android:value="true" /> <!-- true:单机游戏 false:网游 -->
+    <uses-library
+        android:name="org.apache.http.legacy"
+        android:required="false" />
+    <!-- 请注意字母的大小写，ADActivity，而不是AdActivity -->
+    <activity
+        android:name="com.qq.e.ads.ADActivity"
+        android:configChanges="keyboard|keyboardHidden|orientation|screenSize" />
+    <activity
+        android:name="com.qq.e.ads.PortraitADActivity"
+        android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+        android:screenOrientation="portrait" />
+    <activity
+        android:name="com.qq.e.ads.LandscapeADActivity"
+        android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+        android:screenOrientation="portrait"
+        tools:replace="android:screenOrientation"/>
+
+    <provider
+        android:name="androidx.core.content.FileProvider"
+        android:authorities="${applicationId}.fileprovider"
+        android:exported="false"
+        android:grantUriPermissions="true">
+      <meta-data
+          android:name="android.support.FILE_PROVIDER_PATHS"
+          android:resource="@xml/new_app_file_paths"
+          tools:replace="android:resource"/>
+    </provider>
+
+
+    <!--<meta-data-->
+    <!--android:name="com.google.android.gms.ads.APPLICATION_ID"-->
+    <!--android:value="ca-app-pub-8437819803571382~7948632810"/>-->
+  </application>
+  <queries>
+    <package android:name="com.tencent.mm" />
+  </queries>
+</manifest>
