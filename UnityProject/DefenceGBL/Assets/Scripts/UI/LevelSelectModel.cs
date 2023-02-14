@@ -136,12 +136,12 @@ public class LevelSelectModel: MonoBehaviour
     {
         g_Scene.transform.parent.gameObject.SetActive(false);
         TipsManager.m_bIsLoading = true;
-        AsyncOperation op = SceneManager.LoadSceneAsync("Loading");
+        AsyncOperation op = SceneManager.LoadSceneAsync("LoadingScenes");
         while (!op.isDone)
         {
             yield return new WaitForEndOfFrame();
         }
-        SceneManager.LoadScene("Loading");
+        SceneManager.LoadScene("LoadingScenes");
     }
 
 

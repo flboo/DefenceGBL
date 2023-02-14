@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: c76d38b04f3bc4e4e8cfa05ab7f133b4
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: qiantuxuehuati
+  fontNames:
+  - qiantuxuehuati
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: res/foldermode/font.bundle
+  assetBundleVariant: 

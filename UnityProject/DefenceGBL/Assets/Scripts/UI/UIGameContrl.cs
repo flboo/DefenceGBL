@@ -293,12 +293,12 @@ public class UIGameContrl : MonoBehaviour
     {
         this.transform.parent.gameObject.SetActive(false);
         TipsManager.m_bIsLoading = true;
-        AsyncOperation op = SceneManager.LoadSceneAsync("Loading");
+        AsyncOperation op = SceneManager.LoadSceneAsync("LoadingScenes");
         while (!op.isDone)
         {
             yield return new WaitForEndOfFrame();
         }
-        SceneManager.LoadScene("Loading");
+        SceneManager.LoadScene("LoadingScenes");
     }
 	/// <summary>
 	/// 重新开始游戏
