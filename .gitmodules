@@ -1,0 +1,9 @@
+[submodule "UnityProject/DefenceGBL/Assets/3rdParty"]
+	path = UnityProject/DefenceGBL/Assets/3rdParty
+	url = git@github.com:flboo/3rdParty.git
+[submodule "UnityProject/DefenceGBL/Assets/Qarth"]
+	path = UnityProject/DefenceGBL/Assets/Qarth
+	url = git@github.com:flboo/Qarth.git
+[submodule "UnityProject/DefenceGBL/Assets/SDKAdapter"]
+	path = UnityProject/DefenceGBL/Assets/SDKAdapter
+	url = git@github.com:flboo/SDKAdapter.git
