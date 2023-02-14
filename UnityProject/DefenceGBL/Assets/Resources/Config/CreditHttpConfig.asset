@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 020805b126d06416191194d0e5bfdccf, type: 3}
+  m_Name: CreditHttpConfig
+  m_EditorClassIdentifier: 
+  m_BaseUrl: https://api-d458.freeqingnovel.com
+  m_SignKey: vDS2dZiu
+  m_RemoteConfUrl: http://remoteconf.freeqingnovel.com
+  m_RemoteConfAppName: D458
+  m_WXAppid: wx59adaf16248dd083
+  m_WXSecret: 7ec3f3239d6d0de5543716ccd8c0a73e
+  m_WithdrawAccept: https://privacy-policy.freeqingnovel.com/honey.tianmi.wild/agreement_list.html
+  m_UserAgreement: https://privacy-policy.freeqingnovel.com/honey.tianmi.wild/user_agreement.html
+  m_Privacy: https://privacy-policy.freeqingnovel.com/honey.tianmi.wild/privacy_policy.html
+  m_FAQ: https://privacy-policy.freeqingnovel.com/honey.tianmi.wild/FAQ.html
+  m_CooperationAgreement: https://privacy-policy.freeqingnovel.com/honey.tianmi.wild/cooperation_agreement.html
+  m_LogoutAgreement: https://privacy-policy.freeqingnovel.com/honey.tianmi.wild/account-cancellation.html
+  m_ShareLink: http://fission.ewxmax.com/fission/wenxinnongchang08.html

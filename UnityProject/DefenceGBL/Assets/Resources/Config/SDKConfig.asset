@@ -1,0 +1,121 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a30cbcb9bb3e0b41823e663504d8534, type: 3}
+  m_Name: SDKConfig
+  m_EditorClassIdentifier: 
+  bundleIDIos: honey.tianmi.wild
+  bundleIDAndroid: honey.tianmi.wild
+  signatures: -1
+  iosAppID: 
+  channelID: ykp
+  remoteConfUrl: http://remoteconf.freeqingnovel.com
+  remoteConfAppName: D458
+  shopCheckCtrl: 0
+  sharePageUrl: 
+  udeskConfig:
+    enable: 1
+    domain: wy.s2.udesk.cn
+    appid: d94b3bde016e8c9f
+    appkey: 8b79e1cbf75f087ad33886b639a08d78
+  buglyConfig:
+    isEnable: 1
+    isDebugMode: 0
+    priority: 1
+    buglyID_Android: 0881b958b9
+    buglyID_iOS: 
+  dataAnalysisConfig:
+    isEnable: 1
+    gasdkConfig:
+      isEnable: 1
+      isDebugMode: 0
+      priority: 1
+      closeCtrlList: 1
+    tdConfig:
+      isEnable: 1
+      isDebugMode: 0
+      priority: 1
+      appId: 1D196CD66001473C92A5DF04D78475F0
+    trafficConfig:
+      isEnable: 0
+      isDebugMode: 0
+      priority: 1
+      secure_key: 
+      user_id: 0
+      appid_Android: 0
+      appid_IOS: 0
+    embedsdkConfig:
+      isEnable: 1
+      isDebugMode: 0
+      priority: 1
+      enableAF: 0
+      afAppKey: DdWbxT9VRELdEsZiAcnGea
+    secMetaConfig:
+      isEnable: 0
+      isDebugMode: 0
+      priority: 1
+      secMetaLiscense: 
+    GDTActionConfig:
+      isEnable: 1
+      isDebugMode: 0
+      priority: 1
+      userActionSetId: 1111881532
+      appSecretKey: c73f3e99c4cc0226983c1b72928c9b09
+      appId: 1111715599
+  adsConfig:
+    isEnable: 1
+    taurusXAdsConfig:
+      isEnable: 1
+      isDebugMode: 0
+      priority: 1
+      appIDAndroid: f9fc1cd4-98b8-4acb-aace-345655b9a255
+      appIDIos: 
+  socialConfig:
+    isEnable: 0
+    fbConfig:
+      appLinkAndroid: 
+      appLinkiOS: 
+      previewImageAndroid: 
+      previewImageiOS: 
+      shareLink: 
+  richOXConfig:
+    isEnable: 1
+    debug: 0
+    strategyId: 406
+    platformId: 
+    wechatAppId: wx59adaf16248dd083
+    customDeviceID: 1
+    roxH5Config:
+      enable: 0
+    roxShareConfig:
+      enable: 0
+      shareUrl: 
+    roxSectConfig:
+      enable: 0
+    roxChatConfig:
+      enable: 0
+      interval: 10
+  jpushConfig:
+    isEnable: 0
+    isDebugMode: 0
+    priority: 1
+    JPushAppKey: 
+  lebianConfig:
+    isEnable: 1
+    isDebugMode: 0
+    priority: 1
+  tGCenterMgrConfig:
+    isEnable: 1
+    isDebugMode: 0
+    priority: 1
+    appIDAndroid: f9fc1cd4-98b8-4acb-aace-345655b9a255
+    appIDIos: 
+    AppleAppID: 
